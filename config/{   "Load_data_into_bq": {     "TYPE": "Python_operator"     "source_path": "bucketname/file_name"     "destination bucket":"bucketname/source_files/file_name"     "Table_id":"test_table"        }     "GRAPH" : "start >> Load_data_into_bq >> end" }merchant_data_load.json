@@ -1,0 +1,10 @@
+{
+  "Load_data_into_bq": {
+    "TYPE": "Python_operator"
+    "source_path": "bucketname/file_name"
+    "destination bucket":"bucketname/source_files/file_name"
+    "Table_id":"test_table"
+    
+  }
+    "GRAPH" : "start >> Load_data_into_bq >> end"
+}
