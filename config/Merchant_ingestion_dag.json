@@ -1,0 +1,11 @@
+# data ingestion config.json
+{
+  schedule_interval = "@once",
+  "Load_data": {
+    "TYPE": "CSToLocalFilesystem"
+    "source_path": "bucketname/file_name"
+    "destination bucket":"bucketname/source_files/file_name"
+    
+  }
+    "GRAPH" : "start >> data load >> end"
+}
