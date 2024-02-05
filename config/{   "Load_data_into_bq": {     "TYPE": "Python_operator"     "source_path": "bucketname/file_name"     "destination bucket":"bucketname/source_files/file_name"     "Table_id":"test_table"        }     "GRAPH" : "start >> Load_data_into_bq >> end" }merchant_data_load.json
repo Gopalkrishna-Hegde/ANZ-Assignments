@@ -1,4 +1,5 @@
 {
+  "schedule_interval" : "@daily"
   "Load_data_into_bq": {
     "TYPE": "Python_operator"
     "source_path": "bucketname/file_name"
