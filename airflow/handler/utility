@@ -1,0 +1,26 @@
+#datetime
+from datetime import timedelta, datetime
+
+# The DAG object
+from airflow import DAG
+
+# Operators
+from airflow.operators.dummy_operator import DummyOperator
+from airflow.operators.python_operator import PythonOperator
+
+default_args = {
+		'owner': 'Ranga',
+		'start_date': datetime(2024, 2, 5),
+		'retries': 3,
+		'retry_delay': timedelta(minutes=5)
+}
+
+download_file = GCSToLocalFilesystemOperator(
+        task_id="download_file",
+        object_name=FILE_NAME,
+        bucket=BUCKET_NAME,
+        filename=PATH_TO_SAVED_FILE,
+    )
+Daily schedule:
+		-   `schedule_interval='@daily'`
+		-   `schedule_interval='0 0 * * *'`
