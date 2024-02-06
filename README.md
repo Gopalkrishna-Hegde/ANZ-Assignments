@@ -7,3 +7,4 @@ Data Source ---> GCS Storage (Ingestion bucket) ---> Bigquery ----> (tranform fr
 * data validation and data checks can be achive from test cases
 * we can convert as reusable components
 * Testing frmaework can be create from unittests
+* do the transformation with sql on bigquery
