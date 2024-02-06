@@ -16,9 +16,9 @@ def incremental_load_to_bigquery(dataset_id, table_id, source_uri, schema):
     print(f'Incremental data loaded from {source_uri} to {dataset_id}.{table_id}')
 
 if __name__ == "__main__":
-    dataset_id = 'your_dataset_id'
-    table_id = 'your_table_id'
-    source_uri = 'gs://your_bucket_name/Merchnat_data_set.csv'
+    dataset_id = 'Merchant_data'
+    table_id = 'merchant_data'
+    source_uri = 'gs://merchnat_data/Merchnat_data_set.csv'
     schema = [
         bigquery.SchemaField('field1', 'STRING'),
         bigquery.SchemaField('field2', 'INTEGER'),
