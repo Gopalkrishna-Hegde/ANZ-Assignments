@@ -34,7 +34,7 @@ jobs:
   direct_workload_identity_federation:
     if: ${{ github.event_name == 'push' || github.repository == github.event.pull_request.head.repo.full_name }}
     name: 'direct_workload_identity_federation'
-    runs-on: '${{ ubuntu.os }}'
+    runs-on: '${{ os }}'
     strategy:
       fail-fast: false
       matrix:
